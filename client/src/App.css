@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.AppBody {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+.vehicleIcon {
+  height: 40px;
+  padding: 5px;
+}
+
+.inline-label {
+  padding-right: 10px;
+}
+
+.error-message {
+  color: red;
+}

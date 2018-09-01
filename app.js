@@ -3,16 +3,15 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes/api');
 const app = express();
-const logger = require('morgan');
 
+const mongoHost = 'localhost',
+    mongoPort = '27017',
+    collectionName = 'vinventory';
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/vinventory', { useNewUrlParser: true });
+mongoose.connect(`mongodb://${mongoHost}:${mongoPort}/${collectionName}`, { useNewUrlParser: true });
 
-
-app.use(logger('dev'));
 app.use(bodyParser.json());
-
 
 routes(app);
 

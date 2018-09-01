@@ -3,11 +3,11 @@ const Vehicle = require('../models/vehicle');
 const messages = {
     update_success: () => `Vehicle successfully updated`,
     delete_success: () => `Vehicle successfully deleted`
-}
+};
 
 module.exports = {
     getList(req,res,next) {
-        Vehicle.find({})
+        Vehicle.find({}).sort({dateCreated: 1})
             .then( vehicles => {
                 res.send(vehicles);
             })
@@ -55,4 +55,4 @@ module.exports = {
             }))
             .catch(next)
     }
-}
+};

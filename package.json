@@ -1,11 +1,16 @@
 {
   "name": "vinventory",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "server-dev": "nodemon",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"nodemon\" \"npm run client\"",
+    "start-app": "concurrently \"npm start\" \"npm run client\""
   },
   "dependencies": {
+    "concurrently": "^4.0.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
@@ -14,8 +19,7 @@
     "mongoose": "^5.2.12",
     "mongoose-uuid2": "^2.1.0",
     "morgan": "~1.9.0",
-    "node-uuid": "^1.4.8",
-    "pug": "2.0.0-beta11"
+    "node-uuid": "^1.4.8"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"
