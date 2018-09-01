@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const uuid = require('node-uuid');
 // Will add the UUID type to the Mongoose Schema types
-require('mongoose-uuid2')(mongoose);
-const UUID = mongoose.Types.UUID;
 const moment = require('moment')
 
 const messages = {
