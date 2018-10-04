@@ -1,5 +1,8 @@
 ### Vehicle Inventory
-
+A simple inventory application.
+The App is divided into 2 separate sections:
+- BackEnd: A REST api for simple CRUD commands of vehicles. Implemented using Express and mongoose.
+- FrontEnd: A React App Which utilizes the API through a UI. Implemented with Bootstrap.
 
 #### Prerequesites
 
